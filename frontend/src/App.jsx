@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import  Signup  from './pages/Signup'
 import  Login  from './pages/Login'
 import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
-
+import AdminPage from './pages/AdminPage'
+import { useUserStore } from "./stores/useUserStore";
+import { useEffect } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { user } = useUserStore();
 
 return (
 		<div className='min-h-screen bg-gray-900 text-white relative overflow-hidden'>
@@ -25,6 +27,7 @@ return (
 					<Route path='/signup' element={ <Signup />} />
 					<Route path='/login' element={ <Login />} />
 					<Route path='/' element={ <HomePage />} />
+          <Route path='/admin' element={ <AdminPage /> } />
 					
 				</Routes>
 			</div>
