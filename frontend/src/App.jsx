@@ -5,6 +5,7 @@ import  Login  from './pages/Login'
 import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
 import AdminPage from './pages/AdminPage'
+import CategoryPage from './pages/CategoryPage'
 import { useUserStore } from "./stores/useUserStore";
 import { useEffect } from "react";
 
@@ -28,7 +29,7 @@ return (
 					<Route path='/login' element={ <Login />} />
 					<Route path='/' element={ <HomePage />} />
           <Route path='/admin' element={ <AdminPage /> } />
-					
+          <Route path='/category/:category' element={ <CategoryPage /> } />
 				</Routes>
 			</div>
 		</div>
