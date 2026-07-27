@@ -8,6 +8,8 @@ import AdminPage from './pages/AdminPage'
 import CategoryPage from './pages/CategoryPage'
 import CartPage from './pages/CartPage'
 import LoadingSpinner from './components/LoadingSpinner'
+import PurchaseSuccessPage from './pages/PaymentSuccessPage'
+import PurchaseCancelPage from './pages/PaymentCancelPage'
 import { useUserStore } from "./stores/useUserStore";
 import { useCartStore } from "./stores/useCartStore";
 import { useEffect } from "react";
